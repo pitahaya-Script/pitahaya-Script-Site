@@ -1,9 +1,13 @@
 @import "tailwindcss";
 @import 'lenis/dist/lenis.css';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  color-scheme: light;
 }
 
 @theme inline {
@@ -13,12 +17,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+.dark { 
+  --background: #0a0a0a; 
+  --foreground: #ededed;
+  color-scheme: dark;
+}  
 
 body {
   background: var(--background);
@@ -36,4 +39,21 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
+}
+
+/* Definición de la animación para Tailwind v4 */
+@theme {
+  --animate-gradient-bg: gradient-bg 8s ease infinite;
+
+  @keyframes gradient-bg {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }
