@@ -3,12 +3,11 @@ export default function Hero() {
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
       
       {/* 1. FONDO ANIMADO */}
-      <div 
+        <div 
         className="
           absolute inset-0 -z-10
-          bg-gradient-to-r 
-          from-indigo-500 via-purple-500 to-pink-500
-          dark:from-slate-900 dark:via-indigo-950 dark:to-slate-900
+          bg-[linear-gradient(to_right,#F83381,#CD5081,#BCC145,#FFFFFF)]
+          dark:bg-[linear-gradient(to_right,#000000,#191A24,)]
           bg-[length:200%_200%]
           animate-gradient-bg
         "
@@ -22,7 +21,7 @@ export default function Hero() {
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto space-y-6">
         <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white">
           Construyendo proyectos{' '}
-          <span className="bg-gradient-to-r from-indigo-600 to-pink-600 dark:from-indigo-400 dark:to-pink-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r bg-gradient-to-r from-[#E70669] via-[#F83381] to-[#E70669] dark:from-[#E70669] dark:via-[#F83381] dark:to-[#E70669] bg-clip-text text-transparent">
             increíbles
           </span>
         </h1>
@@ -32,11 +31,11 @@ export default function Hero() {
         </p>
 
         <div className="flex justify-center gap-4 pt-2">
-          <button className="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-lg transition-all active:scale-95">
-            Empezar ahora
+          <button className="px-6 py-3 rounded-xl bg-[#E70669] hover:bg-[#BCC145] text-white font-medium shadow-lg transition-all active:scale-95  dark:bg-[#BCC145] dark:hover:bg-[#E70669]">
+            Contacto
           </button>
           <button className="px-6 py-3 rounded-xl bg-white/80 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-800 text-slate-900 dark:text-white font-medium border border-slate-200 dark:border-slate-700 transition-all active:scale-95">
-            Saber más
+            Nuestros proyectos
           </button>
         </div>
       </div>
